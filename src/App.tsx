@@ -1,12 +1,9 @@
-import ListGroup from "./Component/ListGroup";
+import Alert from "./Component/Alert";
+
+
+
 const App = () => {
-  let items = ["Spain", "Germany", "France", "Norway"];
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-  return (
-    <ListGroup items={items} title="cities" onSelected={handleSelectItem} />
-  );
+  return <Alert  text="Alert"/>;
 };
 
 export default App;
