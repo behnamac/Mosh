@@ -1,0 +1,11 @@
+.Heart {
+  padding: 20px;
+  color: #ff6b81;
+  font-size: 100px;
+}
+
+.EmptyHeart {
+  padding: 20px;
+  color: #000000;
+  font-size: 100px;
+}

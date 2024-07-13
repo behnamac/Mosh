@@ -1,25 +1,19 @@
-import Alert from "./Component/Alert";
-import Button from "./Component/Button";
-import { useState } from "react";
+import Button from "./Component/Button/Button";
+import Like from "./Component/Like/Like";
+import ListGroup from "./Component/ListGroup";
+import { FaRegCalendarCheck } from "react-icons/fa";
 
 const App = () => {
-  const BtnText = "Button";
-  const [alertVisible, setAlertVisible] = useState(false);
-  const OnClick = () => {
-    !alertVisible && setAlertVisible(true);
+  const items = ["Germany", "England", "Sweden"];
+  const onClick = () => {
+    console.log("hey");
   };
-  const OnClose = () => {
-    setAlertVisible(false);
-  };
-
   return (
     <>
-      {alertVisible && (
-        <Alert onClose={OnClose}>This is a warning</Alert>
-      )}
-      <Button color="primary" onClicked={OnClick}>
-        {BtnText}
-      </Button>
+      <ListGroup items={items} title="Cities"></ListGroup>
+      <FaRegCalendarCheck color="red" size={100} />
+      <Button onClicked={onClick}>Click Me</Button>
+      <Like onClick={() => console.log("Clicked!")} />
     </>
   );
 };

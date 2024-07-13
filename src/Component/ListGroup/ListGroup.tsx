@@ -1,14 +1,14 @@
 import { useState } from "react";
+import styles from './ListGroup.module.css'
 interface prop {
   items: string[];
   title: string;
-  onSelected: (item: string) => void;
 }
-const ListGroup = ({ items, title, onSelected }: prop) => {
+const ListGroup = ({ items, title }: prop) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
     <>
-      <ul className="list-group">
+      <ul className={styles.golaby}>
         <h1>{title}</h1>
         {items.length === 0 && <p>items not found</p>}
         {items.map((item, index) => (
@@ -21,7 +21,6 @@ const ListGroup = ({ items, title, onSelected }: prop) => {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
-              onSelected(item);
             }}
           >
             {item}
