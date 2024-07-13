@@ -1,17 +1,13 @@
 import Cart from "./Component/Cart";
-import NavBar from "./Component/NavBar";
-import { useState } from "react";
+import Pizza from "./Component/Pizza";
+import Player from "./Component/Player";
 
 const App = () => {
-  const [cartItem, setCartItem] = useState([
-    "product1",
-    "product2",
-    "product3",
-  ]);
   return (
     <>
-      <NavBar countItem={cartItem.length} />
-      <Cart cartItem={cartItem} />
+      <Player />
+      <Pizza />
+      <Cart />
     </>
   );
 };
